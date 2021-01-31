@@ -1,0 +1,62 @@
+Step 1:
+
+Install Python, JDK 1.8, PyCharm
+=================================
+Python: https://www.python.org/downloads/
+Java: https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+
+Step 2:
+
+Download Spark and Winutils.exe
+======================================================
+
+Spark: https://spark.apache.org/downloads.html
+Download Spark: spark-2.4.7-bin-hadoop2.7.tgz
+Folder: C:\spark\spark\spark-2.4.7-bin-hadoop2.7
+
+winutils: https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe
+Folder: C:\spark\spark\spark-2.4.7-bin-hadoop2.7\bin
+
+
+
+
+STep 3: Install PySpark 2.4 through PyCharm
+
+
+Step 4:
+
+Set below mentioned ENV variable
+=================================
+
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_201   ----> Make sure you are having same jdk else you may have to change name here accordingly
+SPARK_HOME  = C:\spark\spark\spark-2.4.7-bin-hadoop2.7
+HADOOP_HOME = C:\spark\spark\spark-2.4.7-bin-hadoop2.7
+PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
+
+
+Step 5:
+
+Add below mentioned directory to PATH
+=======================================
+C:\Program Files\Java\jdk1.8.0_261    ----> Make sure you are having same jdk else you may have to change name here accordingly
+C:\spark\spark\spark-2.4.7-bin-hadoop2.7\bin
+
+
+Note: Make sure that you have both jdk and jre with same version in java installed folder C:\Program Files\Java\jre1.8.0_261
+
+Step 6:
+========
+Create below directory
+
+C:\tmp\hive
+
+
+Step 7:
+========
+Please run below commands in cmd:
+
+winutils.exe chmod -R 777 C:\tmp\hive
+winutils.exe ls -F C:\tmp\hive
+
+
